@@ -22,7 +22,7 @@ export default function SocialFeed({ disasterId }: Props) {
     const fetchPosts = async () => {
         try {
             const res = await axios.get(
-                `http://localhost:5000/disasters/${disasterId}/social-media`
+                `https://disaster-coordination-platform.onrender.com/disasters/${disasterId}/social-media`
             );
             setPosts(res.data);
         } catch (error) {

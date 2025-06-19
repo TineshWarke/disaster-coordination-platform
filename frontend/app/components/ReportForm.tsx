@@ -19,7 +19,7 @@ export default function ReportForm({ disasterId, onSubmitted }: Props) {
 
         try {
             setLoading(true);
-            await axios.post(`http://localhost:5000/disasters/${disasterId}/reports`, {
+            await axios.post(`https://disaster-coordination-platform.onrender.com/disasters/${disasterId}/reports`, {
                 user_id: 'citizenX', // Replace with dynamic user if needed
                 content: content.trim(),
                 image_url: imageUrl.trim() || null,

@@ -21,7 +21,7 @@ export default function DisasterForm({ onCreated }: Props) {
 
         try {
             setLoading(true);
-            await axios.post('http://localhost:5000/disasters', {
+            await axios.post('https://disaster-coordination-platform.onrender.com/disasters', {
                 title: title.trim(),
                 location_name: location.trim(),
                 description: description.trim(),

@@ -26,7 +26,7 @@ export default function ResourceList({ disasterId, lat, lon }: Props) {
         setLoading(true);
         try {
             const res = await axios.get(
-                `http://localhost:5000/disasters/${disasterId}/resources`,
+                `https://disaster-coordination-platform.onrender.com/disasters/${disasterId}/resources`,
                 { params: { lat, lon } }
             );
             setResources(res.data);
