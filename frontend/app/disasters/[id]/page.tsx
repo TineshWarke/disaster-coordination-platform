@@ -23,13 +23,13 @@ export default function DisasterDetailPage() {
     const [reports, setReports] = useState([]);
 
     const fetchDisaster = async () => {
-        const res = await axios.get(`http://localhost:5000/disasters`);
+        const res = await axios.get(`https://disaster-coordination-platform.onrender.com/disasters`);
         const match = res.data.find((d: Disaster) => d.id === id);
         if (match) setDisaster(match);
     };
 
     const fetchReports = async () => {
-        const res = await axios.get(`http://localhost:5000/disasters/${id}/reports`);
+        const res = await axios.get(`https://disaster-coordination-platform.onrender.com/disasters/${id}/reports`);
         setReports(res.data);
     };
 
