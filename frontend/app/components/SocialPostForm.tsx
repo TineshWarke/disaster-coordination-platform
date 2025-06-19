@@ -22,7 +22,7 @@ export default function SocialPostForm({ disasterId, onSubmitted }: Props) {
 
         try {
             setLoading(true);
-            await axios.post(`http://localhost:5000/disasters/${disasterId}/social-media`, {
+            await axios.post(`https://disaster-coordination-platform.onrender.com/disasters/${disasterId}/social-media`, {
                 post: post.trim(),
                 user: user.trim(),
                 type,

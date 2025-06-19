@@ -14,7 +14,7 @@ export default function GeocodePage() {
 
         try {
             setLoading(true);
-            const res = await axios.post('http://localhost:5000/disasters/geocode', {
+            const res = await axios.post('https://disaster-coordination-platform.onrender.com/disasters/geocode', {
                 description
             });
 
