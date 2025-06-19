@@ -11,7 +11,7 @@ import ResourceList from './components/ResourceList';
 import SocialFeed from './components/SocialFeed';
 import { Disaster } from './types/types';
 
-const socket = io('http://localhost:5000');
+const socket = io('https://disaster-coordination-platform.onrender.com');
 
 export default function Home() {
   const [disasters, setDisasters] = useState<Disaster[]>([]);
@@ -20,7 +20,7 @@ export default function Home() {
 
   const fetchDisasters = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/disasters');
+      const res = await axios.get('https://disaster-coordination-platform.onrender.com/disasters');
       setDisasters(res.data);
     } catch (err) {
       console.error('Failed to fetch disasters', err);
@@ -29,7 +29,7 @@ export default function Home() {
 
   const fetchReports = async (id: string) => {
     try {
-      const res = await axios.get(`http://localhost:5000/disasters/${id}/reports`);
+      const res = await axios.get(`https://disaster-coordination-platform.onrender.com/disasters/${id}/reports`);
       setReports(res.data);
     } catch (err) {
       console.error('Failed to fetch reports', err);
